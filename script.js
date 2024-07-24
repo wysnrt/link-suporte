@@ -9,6 +9,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     //if (username === 'suporte' && password === '43690') 
     if (password === '43690'){
         //alert('Login bem-sucedido!');
+        localStorage.setItem('authenticated', 'true');
         // Aqui você pode redirecionar o usuário para outra página ou fazer outra ação desejada
         window.location.href = 'index.html';
     } else {

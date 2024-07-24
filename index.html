@@ -45,5 +45,27 @@
     <p>MADIS: <a href="https://secullum.com.br/at-madis.exe">https://secullum.com.br/at-madis.exe</a></p>
     <p>RWTECH: <a href="https://secullum.com.br/at-rw.exe">https://secullum.com.br/at-rw.exe</a></p>
     
-    <a href="login.html"><button class="botao-sair">Sair</button></a>
+    <a href="login.html"><button class="botao-sair" id="logoutButton">Sair</button></a>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Verifica se o usuário está autenticado
+            var authenticated = localStorage.getItem('authenticated');
+
+            if (authenticated !== 'true') {
+                alert('Você não está autenticado. Redirecionando para a página de login.');
+                window.location.href = 'login.html';
+            }
+
+            // Adiciona um evento para o botão de sair
+            document.getElementById('logoutButton').addEventListener('click', function() {
+                // Limpa o estado de autenticação
+                localStorage.removeItem('authenticated');
+                alert('Você foi deslogado com sucesso.');
+                // Redireciona de volta para a página de login
+                window.location.href = 'login.html';
+            });
+        });
+    </script>
+</body>
 </html>
