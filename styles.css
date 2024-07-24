@@ -1,0 +1,52 @@
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: black;
+}
+h1{
+    color: #2debf8;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+p{
+    font-size: small;
+    font: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+}
+
+a{
+    font-size: small;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(41, 210, 252);
+}
+
+img{
+   width: 200px;
+}
+
+.botao-sair{
+    font-size: 15px;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: rgba(0, 0, 0, 0.6);
+    color: #f9f9f9;
+    letter-spacing: 1.5px;
+    text-align: center;
+    padding: 8px 16px;
+    border: 1px solid #f9f9f9;
+    border-radius: 4px;
+    display: inline-block;
+    position: absolute;
+    top: 16px;
+    right: 32px;
+    transition: 0.2s ease;
+}
+
+.botao-sair:hover{
+    border: 1px solid black;
+    border-radius: 4px;
+    background: whitesmoke;
+    color: black;
+}
