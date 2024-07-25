@@ -54,7 +54,7 @@
 
             if (authenticated !== 'true') {
                 alert('Você não está autenticado. Redirecionando para a página de login.');
-                window.location.href = 'login.html';
+                window.location.href = 'login.html?' + new Date().getTime();
             }
 
             // Adiciona um evento para o botão de sair
@@ -64,6 +64,7 @@
                 alert('Você foi deslogado com sucesso.');
                 // Redireciona de volta para a página de login
                 window.location.href = 'login.html';
+                window.location.reload(true);
             });
 
         });
