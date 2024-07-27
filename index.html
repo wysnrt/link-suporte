@@ -49,25 +49,29 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Verifica se o usuário está autenticado
+            // Verifica se o usuário está autenticado e se a sessão não está expirada
             var authenticated = localStorage.getItem('authenticated');
-
-            if (authenticated !== 'true') {
-                alert('Você não está autenticado. Redirecionando para a página de login.');
+            var expiration = localStorage.getItem('expiration');
+            
+            if (authenticated !== 'true' || new Date().getTime() > expiration) {
+                alert('Você não está autenticado ou sua sessão expirou. Redirecionando para a página de login.');
                 window.location.href = 'login.html?' + new Date().getTime();
             }
 
             // Adiciona um evento para o botão de sair
-            document.getElementById('logoutButton').addEventListener('click', function() {
+            document.getElementById('logoutButton').addEventListener('click', function(event) {
+                // Evita o comportamento padrão do link
+                event.preventDefault();
+
                 // Limpa o estado de autenticação
                 localStorage.removeItem('authenticated');
+                localStorage.removeItem('expiration');
                 alert('Você foi deslogado com sucesso.');
                 // Redireciona de volta para a página de login
                 window.location.href = 'login.html';
-                window.location.reload(true);
             });
-
         });
     </script>
+
 </body>
 </html>
