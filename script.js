@@ -8,7 +8,8 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Verifica a senha. Substitua 'senha123' com a senha desejada
         if (password === '43690') {
-            var expirationTime = new Date().getTime() + (10 * 1 * 1000); // 10 segundos de expiração
+            var expirationTime = new Date().getTime() + (10 * 1000); // 10 segundos de expiração
+            console.log('Senha correta. Definindo expiração para:', expirationTime);
             localStorage.setItem('authenticated', 'true');
             localStorage.setItem('expiration', expirationTime);
             window.location.href = 'index.html';
@@ -20,6 +21,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // Redireciona para index.html se já estiver autenticado e a sessão não estiver expirada
     var authenticated = localStorage.getItem('authenticated');
     var expiration = localStorage.getItem('expiration');
+    console.log('Authenticated:', authenticated);
+    console.log('Expiration:', expiration);
+    console.log('Current Time:', new Date().getTime());
+
+
     if (authenticated === 'true' && new Date().getTime() < expiration) {
         window.location.href = 'index.html';
     }
