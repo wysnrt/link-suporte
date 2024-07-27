@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <link rel="stylesheet" href="styles.css">
     <title>LINKS SUPORTE</title>
 </head>
@@ -45,7 +48,7 @@
     <p>MADIS: <a href="https://secullum.com.br/at-madis.exe">https://secullum.com.br/at-madis.exe</a></p>
     <p>RWTECH: <a href="https://secullum.com.br/at-rw.exe">https://secullum.com.br/at-rw.exe</a></p>
     
-    <a href="login.html"><button class="botao-sair" id="logoutButton">Sair</button></a>
+    <!--<a href="login.html">--><button class="botao-sair" id="logoutButton">Sair</button></a>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -55,7 +58,7 @@
             
             if (authenticated !== 'true' || new Date().getTime() > expiration) {
                 alert('Você não está autenticado ou sua sessão expirou. Redirecionando para a página de login.');
-                window.location.href = 'login.html?' + new Date().getTime();
+                window.location.href = 'login.html';
             }
 
             // Adiciona um evento para o botão de sair
