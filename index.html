@@ -55,11 +55,13 @@
             // Verifica se o usuário está autenticado e se a sessão não está expirada
             var authenticated = localStorage.getItem('authenticated');
             var expiration = localStorage.getItem('expiration');
+            var currentTime = new Date().getTime();
+            
             console.log('Autenticado:', authenticated);
             console.log('Expiração:', expiration);
-            console.log('Hora Atual:', new Date().getTime());
+            console.log('Hora Atual:', currentTime);
             
-            if (authenticated !== 'true' || new Date().getTime() > expiration) {
+            if (authenticated !== 'true' || currentTime > expiration) {
                 alert('Você não está autenticado ou sua sessão expirou. Redirecionando para a página de login.');
                 localStorage.removeItem('authenticated');
                 localStorage.removeItem('expiration');
