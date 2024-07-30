@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Verifica a senha. Substitua 'senha123' com a senha desejada
         if (password === '43690') {
-            var expirationTime = new Date().getTime() + (10 * 1000); // 10 segundos de expiração
+            var expirationTime = new Date().getTime() + (1 * 1000); // 10 segundos de expiração
             console.log('Senha correta. Definindo expiração para:', expirationTime);
             localStorage.setItem('authenticated', 'true');
             localStorage.setItem('expiration', expirationTime);
