@@ -38,7 +38,7 @@ img{
     border: 1px solid #f9f9f9;
     border-radius: 4px;
     display: inline-block;
-    position: fixed;
+    position: absolute;
     top: 16px;
     right: 32px;
     transition: 0.2s ease;
@@ -51,47 +51,10 @@ img{
     color: black;
 }
 
-/* Responsividade para dispositivos móveis */
-@media screen and (max-width: 768px) {
-    h1 {
-        font-size: 1.2em;
-        flex-direction: column;
+/* Estilos para dispositivos em orientação retrato */
+@media screen and (orientation: portrait) {
+    .header {
+        display: none;
     }
-
-    img {
-        width: 150px;
-    }
-
-    .botao-sair {
-        font-size: 14px;
-        padding: 6px 12px;
-        top: 10px;
-        right: 10px;
-    }
-
-    p {
-        font-size: smaller;
-        padding: 0 10px;
-    }
-}
-
-/* Responsividade para dispositivos muito pequenos */
-@media screen and (max-width: 480px) {
-    h1 {
-        font-size: 1em;
-    }
-
-    .botao-sair {
-        font-size: 13px;
-        padding: 5px 10px;
-        top: 8px;
-        right: 8px;
-    }
-
-    p {
-        font-size: x-small;
-        padding: 0 5px;
-    }
-}
 }
 
