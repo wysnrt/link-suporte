@@ -11,7 +11,7 @@
 </head>
 <body>
     <h1><a href="https://lojadoponto.com.br/" target="_blank"><img src="Ponto_Tecnologia_sem fundo.png" alt=""></a> Suporte Loja do Ponto Tecnologia</h1>
-    <p>BAIXAR SOFTWARES:</p>
+    <p>BAIXAR SOFTWARES: </p>
     <p>INSTALADOR PONTO SECULLUM 4: <a href="https://secullum.com.br/ponto4/Pontosec4-setup.exe">https://secullum.com.br/ponto4/Pontosec4-setup.exe</a></p>
     <p>ATUALIZADOR PONTO SECULLUM 4: <a href="https://secullum.com.br/at-ponto4.exe">https://secullum.com.br/at-ponto4.exe</a></p>
     <p>INSTALADOR SECULLUM OFFLINE: <a href="https://www.secullum.com.br/SecullumPontoOffline-setup.exe">https://www.secullum.com.br/SecullumPontoOffline-setup.exe</a></p>
@@ -26,7 +26,8 @@
     <p>ATUALIZADOR CLUBNET: <a href="https://download.secullum.com.br/at-clubenet.exe">https://download.secullum.com.br/at-clubenet.exe</a></p>
     <p>SECULLUM HENRY CONFIGURAÇÕES: <a href="https://www.secullum.com.br/SecHenryConfigs/SecHenryConfigSetup.exe">https://www.secullum.com.br/SecHenryConfigs/SecHenryConfigSetup.exe</a></p>
     <p>RELATÓRIOS: <a href="https://secullum.com.br/at-rel.exe">https://secullum.com.br/at-rel.exe</a></p>
-    <p>DLLS: <a href="https://secullum.com.br/dlls.exe">https://secullum.com.br/dlls.exe</a><br><br></p>
+    <p>DLLS: <a href="https://secullum.com.br/dlls.exe">https://secullum.com.br/dlls.exe</a></p>
+    <p>INSTÂNCIA GERTAREFAS: <a href="https://secullum-my.sharepoint.com/personal/suporte_secullum_com_br/_layouts/15/download.aspx?SourceUrl=%2Fpersonal%2Fsuporte%5Fsecullum%5Fcom%5Fbr%2FDocuments%2FPFs%2FAlterarInstancia%2Eexe">CRIAR INSTÂNCIA DO GERNCIADOR DE TAREFAS</a><br><br></p>
     <p>COMUNICADORES: </p>
     <p>SECULLUM CHECKIN WINDOWS: <a href="https://download.secullum.com.br/SecullumCheckinSetup.exe">https://download.secullum.com.br/SecullumCheckinSetup.exe</a></p>
     <p>SECULLUM CHECKIN LINUX: <a href="https://www.secullum.com.br/SecullumCheckinSetup.deb">https://www.secullum.com.br/SecullumCheckinSetup.deb</a></p>
@@ -55,11 +56,13 @@
             // Verifica se o usuário está autenticado e se a sessão não está expirada
             var authenticated = localStorage.getItem('authenticated');
             var expiration = localStorage.getItem('expiration');
+            var currentTime = new Date().getTime();
+            
             console.log('Autenticado:', authenticated);
             console.log('Expiração:', expiration);
-            console.log('Hora Atual:', new Date().getTime());
+            console.log('Hora Atual:', currentTime);
             
-            if (authenticated !== 'true' || new Date().getTime() > expiration) {
+            if (authenticated !== 'true' || currentTime > expiration) {
                 alert('Você não está autenticado ou sua sessão expirou. Redirecionando para a página de login.');
                 localStorage.removeItem('authenticated');
                 localStorage.removeItem('expiration');
