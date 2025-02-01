@@ -4,8 +4,9 @@ header{
     justify-content: space-between; /* Para separar logo/escrita e botão */
     align-items: center; /* Para alinhar verticalmente os itens */
     padding: 2px; /* Adicione algum espaço interno se necessário */
-    border: 3px solid blue; /* Borda de 2px sólida e branca */
+    /* border: 3px solid rgba(0, 255, 255, 0.705); /* Borda de 2px sólida e branca */
     border-radius: 5px; /* Bordas arredondadas (opcional) */
+    background-color: #0c0648;
 }
 
 div#instagram{
@@ -26,12 +27,11 @@ div#instagram{
 div#links {
     font-size: 15px;
     color: white;
-    border: 3px solid blue; /* Borda de 2px sólida e branca*/
+    /* border: 3px solid rgb(2, 2, 71); /* Borda de 2px sólida e branca*/
     border-radius: 5px;
     padding-left: 10px;
     text-align: justify;
     align-items: center;
-    
 }
 
 #links a {
@@ -118,7 +118,7 @@ img#logo{
     border-radius: 4px;
     display: inline-block;
     position: fixed;
-    top: 16px;
+    top: 40px;
     right: 32px;
     transition: 0.2s ease;
 }
